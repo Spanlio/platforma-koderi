@@ -19,14 +19,16 @@
       "datums" => "01.05.2026",
       "lokacija" => "Liepāja",
       "apraksts" => "Iemācies programmēt no nulles",
-      "cena" => "20"
+      "cena" => "20",
+      "skaits" => "20"
     ],
     [
       "nosaukums" => "Auto diagnostika",
       "datums" => "10.05.2026",
       "lokacija" => "Rīga",
       "apraksts" => "Darbs ar OBD sistēmām",
-      "cena" => "15"
+      "cena" => "15",
+      "skaits" => "30"
     ]
   ];
 

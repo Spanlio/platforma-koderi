@@ -17,9 +17,9 @@
   --radius: 12px;
 
   /* shadows */
-  --shadow-sm: 0 2px 6px rgba(0,0,0,0.05);
-  --shadow-md: 0 5px 15px rgba(0,0,0,0.08);
-  --shadow-lg: 0 10px 25px rgba(0,0,0,0.12);
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
 /* ===== RESET ===== */
@@ -128,8 +128,25 @@ h2 {
   transition: 0.2s;
   pointer-events: none;
 }
+
 .card:hover::before {
   opacity: 1;
+}
+
+.meistarklase-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.meistarklase-card-link:hover {
+  text-decoration: none;
+}
+
+/* make "skatīt" look like action */
+.skatīt {
+  color: var(--primary);
+  font-weight: 500;
 }
 
 /* ===== BUTTONS ===== */
@@ -174,7 +191,9 @@ button:hover,
 }
 
 /* ===== INPUTS ===== */
-input, select, textarea {
+input,
+select,
+textarea {
   width: 100%;
   padding: 10px;
   margin: var(--space-sm) 0 var(--space-md);
@@ -184,7 +203,8 @@ input, select, textarea {
   transition: 0.2s;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   border-color: var(--primary);
   box-shadow: 0 0 0 2px rgba(108, 60, 255, 0.1);
 }
@@ -326,7 +346,7 @@ footer {
   position: absolute;
   width: 500px;
   height: 500px;
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 50%;
   top: -150px;
   left: -150px;
@@ -337,7 +357,7 @@ footer {
   position: absolute;
   width: 400px;
   height: 400px;
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 50%;
   bottom: -150px;
   right: -150px;
@@ -346,7 +366,7 @@ footer {
 .cta-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.2);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .cta-content {
@@ -378,7 +398,8 @@ footer {
 .hero,
 .cta {
   border-radius: var(--radius);
-  overflow: hidden; /* IMPORTANT */
+  overflow: hidden;
+  /* IMPORTANT */
 }
 
 /* ===== RESPONSIVE ===== */
@@ -433,7 +454,141 @@ footer {
   justify-content: space-between;
   align-items: center;
 }
+
 .meistarklase-bottom button {
   position: relative;
   z-index: 2;
+}
+
+.meistarklase-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 13px;
+  color: #666;
+}
+
+.meistarklase-meta span {
+  background: #f0f0f5;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+/* ===========================================================================================================
+                                      A K T U A L I T A T E S / B L O G 
+   ===========================================================================================================*/
+.aktualitate-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-left: 4px solid var(--primary);
+}
+
+.aktualitate-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.aktualitate-top h3 {
+  font-size: 18px;
+}
+
+.aktualitate-date {
+  font-size: 12px;
+  color: #888;
+}
+
+.aktualitate-apraksts {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* ===========================================================================================================
+                                      M O D A L
+   ===========================================================================================================*/
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: var(--radius);
+  width: 90%;
+  max-width: 400px;
+  box-shadow: var(--shadow-lg);
+}
+
+.close {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.form-summary {
+  background: #f5f5f7;
+  padding: 10px;
+  border-radius: var(--radius);
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.form-summary {
+  background: #f5f5f7;
+  padding: 15px;
+  border-radius: var(--radius);
+  margin: 20px 0;
+}
+
+.form-summary h4 {
+  margin-bottom: 10px;
+}
+
+.summary-row,
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.summary-total {
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.checkout-note {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* ===========================================================================================================
+                                      P A R   M U M S
+   ===========================================================================================================*/
+.par-mums .intro {
+  max-width: 700px;
+  margin-bottom: var(--space-lg);
+  color: #444;
+  line-height: 1.6;
+} 
+
+.par-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-md);
+}
+
+.par-contact {
+  margin-top: var(--space-xl);
 }

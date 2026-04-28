@@ -3,6 +3,7 @@
 <head>
   <title>Koderi</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js" defer></script>
 </head>
 <body>
 
@@ -14,6 +15,7 @@
         <a href="index.php">Sākums</a>
         <a href="meistarklases.php">Meistarklases</a>
         <a href="aktualitates.php">Blogi</a>
+        <a href="par-mums.php">Par mums</a>
       </div>
     </nav>
   </div>

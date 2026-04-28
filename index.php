@@ -51,21 +51,24 @@
       "datums" => "01.05.2026",
       "lokacija" => "Liepāja",
       "apraksts" => "Iemācies programmēt no nulles",
-      "cena" => "20"
+      "cena" => "20",
+      "skaits" => "30"
     ],
     [
       "nosaukums" => "Auto diagnostika",
       "datums" => "10.05.2026",
       "lokacija" => "Rīga",
       "apraksts" => "Darbs ar OBD sistēmām",
-      "cena" => "15"
+      "cena" => "15",
+      "skaits" => "12"
     ],
     [
       "nosaukums" => "Photoshop",
       "datums" => "15.05.2026",
       "lokacija" => "Online",
       "apraksts" => "Dizaina pamati un prakse",
-      "cena" => "10"
+      "cena" => "10",
+      "skaits" => "20"
     ]
   ];
 
