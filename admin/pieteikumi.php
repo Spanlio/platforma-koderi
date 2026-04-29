@@ -24,21 +24,42 @@
         </thead>
 
         <tbody>
-          <tr>
-            <td>Jānis Bērziņš</td>
-            <td>janis@test.lv</td>
-            <td>JavaScript</td>
-            <td>01.05.2026</td>
-            <td>Gaida maksājumu</td>
-          </tr>
+
+          <?php
+          $pieteikumi = [
+            [
+              "vards" => "Jānis Bērziņš",
+              "email" => "janis@test.lv",
+              "kurss" => "JavaScript",
+              "datums" => "01.05.2026",
+              "statuss" => "pending"
+            ],
+            [
+              "vards" => "Anna Liepiņa",
+              "email" => "anna@test.lv",
+              "kurss" => "Photoshop",
+              "datums" => "15.05.2026",
+              "statuss" => "approved"
+            ]
+          ];
+
+          foreach ($pieteikumi as $p):
+          ?>
 
           <tr>
-            <td>Anna Liepiņa</td>
-            <td>anna@test.lv</td>
-            <td>Photoshop</td>
-            <td>15.05.2026</td>
-            <td>Apstiprināts</td>
+            <td><?= $p['vards'] ?></td>
+            <td><?= $p['email'] ?></td>
+            <td><?= $p['kurss'] ?></td>
+            <td><?= $p['datums'] ?></td>
+            <td>
+              <span class="status <?= $p['statuss'] ?>">
+                <?= $p['statuss'] == 'approved' ? 'Apstiprināts' : 'Gaida maksājumu' ?>
+              </span>
+            </td>
           </tr>
+
+          <?php endforeach; ?>
+
         </tbody>
       </table>
     </div>

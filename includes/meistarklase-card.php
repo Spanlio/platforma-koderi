@@ -3,6 +3,7 @@
   <div class="meistarklase-card">
 
     <div class="meistarklase-top">
+      <span class="course-pill">Meistarklase</span>
       <h3><?= $meistarklase['nosaukums'] ?></h3>
     </div>
 

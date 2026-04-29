@@ -4,16 +4,31 @@
 <section class="hero">
   <div class="container hero-content">
     <div class="hero-text">
+      <span class="eyebrow">Praktiskas tehnoloģiju meistarklases</span>
       <h1>Atrodi savu nākamo meistarklasi</h1>
-      <p>Mācies, attīsties un pievienojies labākajiem kursiem Latvijā</p>
-      <a href="meistarklases.php" class="btn">Skatīt meistarklases</a>
+      <p>Mācies modernā vidē, attīsti praktiskas prasmes un piesakies nodarbībām, kas palīdz ātrāk tikt līdz rezultātam.</p>
+
+      <div class="hero-actions">
+        <a href="meistarklases.php" class="btn">Skatīt meistarklases</a>
+        <a href="aktualitates.php" class="btn soft">Jaunumi</a>
+      </div>
+
+      <div class="hero-stats">
+        <span><strong>18+</strong> meistarklases</span>
+        <span><strong>450+</strong> dalībnieki</span>
+        <span><strong>4.9</strong> vērtējums</span>
+      </div>
     </div>
 
     <div class="hero-box">
-      <div class="card highlight">
-        <h3>🔥 Jaunums</h3>
-        <p>Web izstrādes meistarklase</p>
-        <span>20€</span>
+      <div class="highlight">
+        <span class="highlight-badge">Jaunums</span>
+        <h3>Web izstrādes meistarklase</h3>
+        <p>HTML, CSS un JavaScript pamati praktiskā nodarbībā.</p>
+        <div class="highlight-footer">
+          <span>20€</span>
+          <small>01.05.2026</small>
+        </div>
       </div>
     </div>
   </div>
@@ -22,24 +37,31 @@
 <!-- FEATURES -->
 <section class="features container">
   <div class="feature">
-    <h3>📚 Plašs piedāvājums</h3>
+    <span class="feature-icon">📚</span>
+    <h3>Pārdomāts piedāvājums</h3>
     <p>Dažādas IT un praktiskās meistarklases</p>
   </div>
 
   <div class="feature">
-    <h3>⚡ Ātra pieteikšanās</h3>
+    <span class="feature-icon">⚡</span>
+    <h3>Ātra pieteikšanās</h3>
     <p>Vienkāršs un saprotams process</p>
   </div>
 
   <div class="feature">
-    <h3>💳 Droši maksājumi</h3>
+    <span class="feature-icon">💳</span>
+    <h3>Droši maksājumi</h3>
     <p>Integrācija ar maksājumu sistēmām</p>
   </div>
 </section>
 
 <!-- COURSES -->
 <section class="container">
-  <h2>Populārās meistarklases</h2>
+  <div class="section-heading">
+    <span class="eyebrow">Ko apgūt tālāk</span>
+    <h2>Populārās meistarklases</h2>
+    <p>Izvēlies nodarbību pēc temata, vietas un sev ērtākā datuma.</p>
+  </div>
 
   <div class="grid">
 
@@ -96,4 +118,4 @@
   </div>
 </section>
 
-<?php require "includes/footer.php"; ?>S
+<?php require "includes/footer.php"; ?>

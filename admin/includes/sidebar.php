@@ -1,5 +1,8 @@
 <aside class="sidebar">
-  <h2 class="logo">Admin</h2>
+  <div class="sidebar-logo">
+    <img src="/2023/markovs/koderi/assets/images/logo.png" alt="logo" class="logo-img">
+    <h2 class="logo-text">Admin</h2>
+  </div>
 
   <ul class="sidebar-menu">
 
@@ -11,11 +14,12 @@
 
     <li class="dropdown">
       <div class="dropdown-toggle">
-        <i class="fa-solid fa-graduation-cap"></i> Meistarklases <i class="fa-solid fa-caret-down"></i>
+        <i class="fa-solid fa-graduation-cap"></i> Meistarklases
       </div>
+
       <ul class="dropdown-menu">
-        <li><a href="meistarklases.php">Visas</a></li>
-        <li><a href="meistarklase-pievienot.php">Pievienot <i class="fa-solid fa-plus"></i></a></li>
+        <li><a href="meistarklases.php">Gaidāmās</a></li>
+        <li><a href="meistarklases-notikusas.php">Notikušās</a></li>
       </ul>
     </li>
 

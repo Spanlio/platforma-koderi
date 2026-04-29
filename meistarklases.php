@@ -1,13 +1,19 @@
 <?php require "includes/header.php"; ?>
 
-<h1>Meistarklases</h1>
+<div class="page-heading">
+  <span class="eyebrow">Katalogs</span>
+  <h1>Meistarklases</h1>
+  <p>Atrodi sev piemērotu nodarbību pēc tēmas, lokācijas un pieredzes līmeņa.</p>
+</div>
 
-<input type="text" placeholder="Meklēt...">
-<select>
-  <option>Kategorija</option>
-  <option>IT</option>
-  <option>Auto</option>
-</select>
+<div class="filters">
+  <input type="text" placeholder="Meklēt meistarklasi...">
+  <select>
+    <option>Kategorija</option>
+    <option>IT</option>
+    <option>Auto</option>
+  </select>
+</div>
 
 <div class="grid">
 
@@ -38,7 +44,6 @@
 
   ?>
 
-</div>
 </div>
 
 <?php require "includes/footer.php"; ?>

@@ -4,7 +4,7 @@
 <div class="admin-layout">
 
   <!-- SIDEBAR -->
-<?php include "includes/sidebar.php"; ?>
+  <?php include "includes/sidebar.php"; ?>
   <!-- MAIN -->
   <main class="admin-main">
 
@@ -90,17 +90,30 @@
 
             foreach ($meistarklases as $m) {
               $free = $m['max'] - $m['skaits'];
-              $pilns = $free <= 0;
+              $percent = $m['skaits'] / $m['max'];
+
+              if ($percent >= 0.8) {
+                $statusClass = "status-red";
+                $statusText = "Gandrīz pilns";
+              } elseif ($percent >= 0.5) {
+                $statusClass = "status-yellow";
+                $statusText = "Puse aizņemta";
+              } else {
+                $statusClass = "status-green";
+                $statusText = "Daudz vietu";
+              }
             ?>
               <tr>
                 <td><?= $m['nosaukums'] ?></td>
                 <td><?= $m['datums'] ?></td>
                 <td><?= $m['lokacija'] ?></td>
                 <td><?= $m['cena'] ?>€</td>
-                <td><?= $free ?> / <?= $m['max'] ?></td>
+                <td class="<?= $statusClass ?>">
+                  <?= $free ?> / <?= $m['max'] ?>
+                </td>
                 <td>
-                  <span class="status <?= $pilns ? 'full' : 'open' ?>">
-                    <?= $pilns ? 'Pilns' : 'Pieejams' ?>
+                  <span class="status <?= $statusClass ?>">
+                    <?= $statusText ?>
                   </span>
                 </td>
               </tr>
@@ -114,10 +127,10 @@
       <div class="admin-side">
 
         <div class="admin-card chart-card">
-          <div class="card-text">
-            <h4>Pieteikumu skaits</h4>
-            <p>Pieteikumi pa mēnešiem</p>
-          </div>
+          <!-- <div class="card-text"> -->
+          <h4>Pieteikumu skaits</h4>
+          <p>Pieteikumi pa mēnešiem</p>
+          <!-- </div> -->
           <canvas id="barChart"></canvas>
         </div>
 
